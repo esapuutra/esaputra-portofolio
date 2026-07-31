@@ -56,4 +56,22 @@
   :root:not(.dark) .opacity-70 {
     opacity: 0.82;
   }
+
+  :root:not(.dark) .bg-violet-700 {
+    background-color: #9a593d;
+    color: #fffaf3;
+  }
+
+  :root:not(.dark) .hover\:bg-violet-600:hover {
+    background-color: #7f452f;
+  }
+
+  :root:not(.dark) .text-violet-500,
+  :root:not(.dark) .hover\:text-violet-500:hover {
+    color: #a65334;
+  }
+
+  :root:not(.dark) .fill-purple-600 {
+    fill: #9a593d;
+  }
 }
