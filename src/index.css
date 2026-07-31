@@ -47,3 +47,13 @@
   .theme-nav { background-color: var(--nav-bg); }
   .theme-field { background-color: var(--page-bg); color: var(--text-primary); }
 }
+
+@layer utilities {
+  :root:not(.dark) .opacity-50 {
+    opacity: 0.72;
+  }
+
+  :root:not(.dark) .opacity-70 {
+    opacity: 0.82;
+  }
+}
