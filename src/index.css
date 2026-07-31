@@ -4,13 +4,14 @@
 @layer base {
   :root {
     color-scheme: light;
-    --page-bg: #fafafa;
-    --text-primary: #18181b;
-    --surface: #ffffff;
-    --surface-muted: #f4f4f5;
-    --surface-hover: #e4e4e7;
-    --border: #d4d4d8;
-    --nav-bg: rgb(255 255 255 / 0.82);
+    --page-bg: #f4f0e8;
+    --text-primary: #292524;
+    --surface: #fffdf8;
+    --surface-muted: #e9e2d6;
+    --surface-hover: #ded5c7;
+    --border: #d3c8b8;
+    --nav-bg: rgb(255 253 248 / 0.88);
+    --card-shadow: 0 10px 30px rgb(87 73 53 / 0.09), 0 2px 8px rgb(87 73 53 / 0.06);
   }
 
   :root.dark {
@@ -22,6 +23,7 @@
     --surface-hover: #52525b;
     --border: #52525b;
     --nav-bg: rgb(39 39 42 / 0.82);
+    --card-shadow: none;
   }
 
   html { background: var(--page-bg); }
@@ -35,7 +37,10 @@
 }
 
 @layer components {
-  .surface-card { background-color: var(--surface); }
+  .surface-card {
+    background-color: var(--surface);
+    box-shadow: var(--card-shadow);
+  }
   .surface-muted { background-color: var(--surface-muted); }
   .surface-hover:hover { background-color: var(--surface-hover); }
   .theme-border { border-color: var(--border); }
