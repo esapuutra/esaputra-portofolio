@@ -19,14 +19,14 @@ function App() {
           <p className="text-base/loose mb-6">
           <i className="ri-map-pin-line mr-2"></i> Kemayoran, Jakarta Pusat
           </p>
-          <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
+          <div className="flex items-center gap-3 mb-6 surface-card w-fit p-4 rounded-2xl">
             <q>Teruslah berjuang dan kembangkan potensi diri. 👌</q>
           </div>
           <div className="flex items-center sm:gap-4 gap-2">
             <a href="/CV_Esa_Putra_Priyadimas.pdf" download className="bg-violet-700 p-4 rounded-xl hover:bg-violet-600 items-center">
               Download CV <i className="ri-download-line ri-lg ml-1"></i>
             </a>
-            <a href="#proyek" className="bg-zinc-700 p-4 rounded-xl hover:bg-zinc-600">
+            <a href="#proyek" className="surface-muted surface-hover p-4 rounded-xl">
               Lihat Proyek <i className="ri-eye-fill ri-lg ml-1"></i>
             </a>
           </div>
@@ -45,7 +45,7 @@ function App() {
       {/* tentang */}
       <div className="tentang mt-32 py-10" id="tentang">
         <h1 className="text-center text-4xl font-bold mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Tentang Saya</h1>
-        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 surface-card rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
           <p className="text-base/loose mb-10">
             Lulusan dari Sistem Informasi Industri Otomotif di Politeknik STMI Jakarta dengan pengalaman menjadi Full Stack Web Developer. Terampil membangun aplikasi web menggunakan PHP Native, Laravel, dan JavaScript, serta menguasai manajemen basis data, analisis serta pemodelan sistem dengan Use Case, Activity, dan Sequence Diagram, serta desain dan pemodelan database. Memiliki pengalaman magang 1 tahun, sertifikasi resmi BNSP Database Administrator. Memiliki ketertarikan tinggi dalam memecahkan masalah dan mengoptimalkan proses bisnis dan selalu ingin terus belajar serta berkembang di dunia teknologi.
           </p>
@@ -75,7 +75,7 @@ function App() {
           <h1 className="text-4xl mb-2 font-bold text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Pengalaman</h1>
           <p className="text-base/loose text-center mb-10 opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Berikut ini adalah pengalaman yang saya miliki</p>
           <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-            <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg mb-3" >
+            <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 surface-card rounded-lg mb-3" >
               <div className="grid md:grid-cols-[1fr_5fr] items-center xl:gap-0 gap-6 grid-cols-1">
                 <img src={DataImage.PengalamanIGP} alt="Image" className="w-30 rounded-md" loading="lazy" />
                 <div>
@@ -89,7 +89,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg">
+            <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 surface-card rounded-lg">
               <div className="grid md:grid-cols-[1fr_5fr] items-center xl:gap-0 gap-6 grid-cols-1">
                 <img src={DataImage.PengalamanBPPT} alt="Image" className="w-30 rounded-md" loading="lazy" />
                 <div>
@@ -112,8 +112,8 @@ function App() {
           <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
 
             {listTools.map((tool) => (
-              <div className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" key={tool.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad} data-aos-once="true">
-                <img src={tool.gambar} alt="Tools Image" className="w-14 bg-zinc-800 p-1 group-hover:bg-zinc-900" loading="lazy" />
+              <div className="flex items-center gap-2 p-3 border theme-border rounded-md surface-hover group" key={tool.id} data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad} data-aos-once="true">
+                <img src={tool.gambar} alt="Tools Image" className="w-14 surface-card p-1" loading="lazy" />
                 <div>
                   <h4 className="font-bold ">{tool.nama}</h4>
                   <p className="opacity-50">{tool.ket}</p>
@@ -133,7 +133,7 @@ function App() {
           {listProyek.map(proyek => (
             <div
               key={proyek.id}
-              className="p-4 bg-zinc-800 rounded-md"
+              className="p-4 surface-card rounded-md"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay={proyek.dad}
@@ -148,7 +148,7 @@ function App() {
                   {proyek.tools.map((tool, index) => (
                     <p
                       key={index}
-                      className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold"
+                      className="py-1 px-3 border theme-border surface-muted rounded-md font-semibold"
                     >
                       {tool}
                     </p>
@@ -180,7 +180,7 @@ function App() {
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Berikut ini beberapa sertifikat yang pernah saya capai </p>
         <div className="sertifikat-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listSertifikat.map(sertifikat => (
-            <div key={sertifikat.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={sertifikat.dad} data-aos-once="true">
+            <div key={sertifikat.id} className="p-4 surface-card rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={sertifikat.dad} data-aos-once="true">
               <img src={sertifikat.gambar} alt="Sertifikat Image" loading="lazy" />
               <div>
                 <h1 className="text-2xl font-bold mt-4">{sertifikat.nama}</h1>
@@ -196,19 +196,19 @@ function App() {
       <div className="kontak mt-32 sm:p-10 p-0" id="kontak">
         <h1 className="text-4xl mb-2 font-bold text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Kontak</h1>
         <p className="text-base/loose text-center mb-10 opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Mari terhubung dengan saya</p>
-        <form action="https://formsubmit.co/esapuutraa@gmail.com" method="POST" className="bg-zinc-800 p-10 sm:w-fit w-full mx-auto rounded-md" autoComplete="off" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+        <form action="https://formsubmit.co/esapuutraa@gmail.com" method="POST" className="surface-card p-10 sm:w-fit w-full mx-auto rounded-md" autoComplete="off" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Nama Lengkap</label>
-              <input type="text" name="nama" placeholder="Masukkan Nama ..." className="border border-zinc-500 p-2 rounded-md" required />
+              <input type="text" name="nama" placeholder="Masukkan Nama ..." className="border theme-border theme-field p-2 rounded-md" required />
             </div>
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Email</label>
-              <input type="email" name="email" placeholder="Masukkan Email ..." className="border border-zinc-500 p-2 rounded-md" required />
+              <input type="email" name="email" placeholder="Masukkan Email ..." className="border theme-border theme-field p-2 rounded-md" required />
             </div>
             <div className="flex flex-col gap-2">
               <label htmlFor="pesan" className="font-semibold">Pesan</label>
-              <textarea name="pesan" id="pesan" cols="45" rows="7" placeholder="Pesan ..." className="border border-zinc-500 p-2 rounded-md" required></textarea>
+              <textarea name="pesan" id="pesan" cols="45" rows="7" placeholder="Pesan ..." className="border theme-border theme-field p-2 rounded-md" required></textarea>
             </div>
             <div className="text-center">
               <button type="submit" className="bg-violet-700 p-3 rounded-lg w-full cursor-pointer border border-zinc-600 hover:bg-violet-600">Kirim Pesan</button>

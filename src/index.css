@@ -2,7 +2,43 @@
 
 
 @layer base {
+  :root {
+    color-scheme: light;
+    --page-bg: #fafafa;
+    --text-primary: #18181b;
+    --surface: #ffffff;
+    --surface-muted: #f4f4f5;
+    --surface-hover: #e4e4e7;
+    --border: #d4d4d8;
+    --nav-bg: rgb(255 255 255 / 0.82);
+  }
+
+  :root.dark {
+    color-scheme: dark;
+    --page-bg: #18181b;
+    --text-primary: #ffffff;
+    --surface: #27272a;
+    --surface-muted: #3f3f46;
+    --surface-hover: #52525b;
+    --border: #52525b;
+    --nav-bg: rgb(39 39 42 / 0.82);
+  }
+
+  html { background: var(--page-bg); }
+
   body{
     font-family: "Poppins", sans-serif;
+    background: var(--page-bg);
+    color: var(--text-primary);
+    transition: background-color 250ms ease, color 250ms ease;
   }
+}
+
+@layer components {
+  .surface-card { background-color: var(--surface); }
+  .surface-muted { background-color: var(--surface-muted); }
+  .surface-hover:hover { background-color: var(--surface-hover); }
+  .theme-border { border-color: var(--border); }
+  .theme-nav { background-color: var(--nav-bg); }
+  .theme-field { background-color: var(--page-bg); color: var(--text-primary); }
 }
