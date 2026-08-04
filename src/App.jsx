@@ -22,12 +22,15 @@ function App() {
           <div className="flex items-center gap-3 mb-6 surface-card w-fit p-4 rounded-2xl">
             <q>Teruslah berjuang dan kembangkan potensi diri. 👌</q>
           </div>
-          <div className="flex items-center sm:gap-4 gap-2">
+          <div className="flex flex-wrap items-center sm:gap-4 gap-2">
             <a href="/CV_Esa_Putra_Priyadimas.pdf" download className="bg-violet-700 p-4 rounded-xl hover:bg-violet-600 items-center">
               Download CV <i className="ri-download-line ri-lg ml-1"></i>
             </a>
             <a href="#proyek" className="surface-muted surface-hover p-4 rounded-xl">
               Lihat Proyek <i className="ri-eye-fill ri-lg ml-1"></i>
+            </a>
+            <a href="https://github.com/esapuutra" target="_blank" rel="noopener noreferrer" className="surface-muted surface-hover p-4 rounded-xl">
+              GitHub <i className="ri-github-fill ri-lg ml-1"></i>
             </a>
           </div>
         </div>
